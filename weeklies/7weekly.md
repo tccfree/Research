@@ -2,7 +2,7 @@
 这周的工作主要是读了三篇hand pose、shape的paper，下面分别总结一下这三篇的收获：
 
 ## 《Weakly-supervised 3D Hand Pose Estimation from Monocular RGB Images》
-![f](picture/1.png)这是ECCV2018的一篇文章，文章提出了一种3d pose估计方法，在合成数据集上完成训练并通过深度图弱监督过渡到真实世界数据集，文章亮点体现在：
+![f](/picture/1.png)这是ECCV2018的一篇文章，文章提出了一种3d pose估计方法，在合成数据集上完成训练并通过深度图弱监督过渡到真实世界数据集，文章亮点体现在：
 
 * 对于在真实数据集获取带标签的训练数据困难的问题，文章提出了使用容易获得的深度图对训练过程进行弱监督的方式进行训练。
 * 文章提出的深度图监督的方式对于弱监督和全监督的效果都有贡献。
@@ -13,7 +13,7 @@
 * 深度图对于模型在监督和非监督上都有提升，但是是否应该考虑真实世界所获取的深度信息在边界上噪声比较明显，是否可以减少这些噪声在训练中的影响。
 
 ## 《3D Hand Shape and Pose Estimation from a Single RGB Image》
-![f](picture/2.png)这是ECCV2019的一篇文章，文章提出一种从单个RGB图像恢复出手形状的方法，在此之前的工作只关注从RGB中恢复出手的关键点坐标。文章的亮点体现在：
+![f](/picture/2.png)这是ECCV2019的一篇文章，文章提出一种从单个RGB图像恢复出手形状的方法，在此之前的工作只关注从RGB中恢复出手的关键点坐标。文章的亮点体现在：
 
 * 为了解决3d mesh的高维性，文章中使用图结构来表示mesh，并利用GCNN将backbone提取到的图像特征转换成3d mesh。
 * 为了解决从人工合成的数据集上训练的模型在真实世界数据集上效果不好的问题，文章提出了一种利用深度信息进行弱监督的方法，即利用ground truth对得到的3d mesh经过render后的深度图进行监督。
@@ -25,7 +25,7 @@
 * 模型表现上，此种方法相对于其他方法的优势可能来源于预先设计好的mesh图结构上，但是hand和body一样有个体差异同时不同的pose也会带来变形，是否可以更直接的引入shape和pose对于图结构的影响值得进一步探究。
 
 ## 《Pushing the Envelope for RGB-based Dense 3D Hand Pose Estimation via Neural Rendering》
-![f](picture/3.png)这是CVPR2019的一篇文章，文章的亮点体现在：
+![f](/picture/3.png)这是CVPR2019的一篇文章，文章的亮点体现在：
 * 可进行梯度传播的 neural render生成出分割和3d joint的结果，用于训练mesh。
 * 在test过程中，可以通过减少render输出和中间结果的差异，利用梯度进行迭代提高mesh精度。
 * 自监督数据增强，通过改变得到mesh的形状和视角合成出相应的训练数据用于数据增强。
