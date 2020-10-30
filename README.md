@@ -4,7 +4,7 @@
 
 paper |keyword & summary
 :-: | :-: 
-[Weakly Supervised 3D Hand Pose Estimation via Biomechanical Constraints<br>ECCV 2020](https://arxiv.org/pdf/2003.09282.pdf)| [Biochanical Constraints<br>Root depth refinement](/weeklies/8weekly.md)
+[Weakly Supervised 3D Hand Pose Estimation via Biomechanical Constraints<br>ECCV 2020](https://arxiv.org/pdf/2003.09282.pdf)| [Biomechanical Constraints、<br>Root depth refinement](/weeklies/8weekly.md)
 [Pushing the Envelope for RGB-Based Dense 3D Hand Pose Estimation<br>CVPR 2019](/picture/push.jpeg)|[under construction...](/picture/push.jpeg)
 [3D Hand Shape and Pose From Images in the Wild<br>CVPR 2019](/picture/push.jpeg)|[under construction...](/picture/push.jpeg)
 [Embodied Hands: Modeling and Capturing Hands and Bodies Together<br>Siggraph Asia 2017](/picture/push.jpeg)|[under construction...](/picture/push.jpeg)
