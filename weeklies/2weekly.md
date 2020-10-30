@@ -1,5 +1,5 @@
 #  2020/8/16 周报 
----
+
 这周主要结束了线性代数部分书本的学习，看了两篇论文《Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift》和 VGG《VERY DEEP CONVOLUTIONAL NETWORKS FOR LARGE-SCALE IMAGE RECOGNITION》，Inception v1的《Going deeper with convoluNions》正在整理。
 ## 对于BN的收获：
 * 介绍了什么是covariate shit、internal covariate shit，深层网络训练较难的原因，由此引出了batch normalization的处理方式，它希望可以获得固定分布的每层的input，这样网络的梯度传播更稳定，learning rate可以适度提高，同时每个样本的梯度计算都考虑到了batch整体的数据有regularization的作用。
