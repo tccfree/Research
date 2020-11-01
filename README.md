@@ -19,12 +19,12 @@ paper |keyword & summary
 
 ## weeklies index :man_teacher: :raising_hand:
 * [2020/08/01](weeklies/1weekly.md) 
-* [2020/08/16](weeklies/1weekly.md)
-* [2020/09/10](weeklies/1weekly.md)
-* [2020/09/27](weeklies/1weekly.md)
-* [2020/10/04](weeklies/1weekly.md)
-* [2020/10/18](weeklies/1weekly.md)
-* [2020/10/25](weeklies/1weekly.md) 
-* [2020/10/30](weeklies/1weekly.md)
+* [2020/08/16](weeklies/2weekly.md)
+* [2020/09/10](weeklies/3weekly.md)
+* [2020/09/27](weeklies/4weekly.md)
+* [2020/10/04](weeklies/5weekly.md)
+* [2020/10/18](weeklies/7weekly.md)
+* [2020/10/25](weeklies/7.5weekly.md) 
+* [2020/10/30](weeklies/8weekly.md)
 
 more to come soon... :fuelpump::fuelpump::fuelpump:
