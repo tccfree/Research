@@ -4,7 +4,7 @@
 
 ## 《Learning to Reconstruct 3D Human Pose and Shape via Model-fitting in the Loop
 ![](/picture/5.png)
-这是 ICCV 2019的一篇文章，提出了结合 regression 和 optimization 的一种学习方法 SPIN，文章的亮点和值得注意的细节如下：
+**这是 ICCV 2019的一篇文章，提出了结合 regression 和 optimization 的一种学习方法 SPIN，文章的亮点和值得注意的细节如下：**
 
 * optimization-based model 的精度更高但是容易受初值的影响，而 regression-based model 需要大量的训练数据；基于此，文章提出相结合的方法，利用 regression 得到的 estimate 使得 iterative optimization 更快速准确，同时 optimization 的结果反过来也可以作为 regression network 的 strong supervision。
 
@@ -18,16 +18,15 @@
 
 * 文章指出在 regression network 的训练过程中避免直接使用 2d reprojected loss，而使用 iterative fitting 的结果可以减少网络的学习负担。同时 SPIN 方法也有很好的 self-improving 特性。
 
-* 文章提到在训练过程中一些 failure cases 可能会影像模型整体的训练效果，文章对于 optimization routine 中 joints reproduction error 大于阈值的，直接采用 2d reproduction loss 训练；同时对于 SMPLify 输出 shape 参数 与 SMPL prior 不符的，也不使用它进行训练，而是直接利用 L2 loss ，让 shape 参数更接近 mean pose。
+* 文章提到在训练过程中一些 failure cases 可能会影像模型整体的训练效果，文章对于 optimization routine 中 joints reprojection error 大于阈值的，直接采用 2d reproduction loss 训练；同时对于 SMPLify 输出 shape 参数 与 SMPL prior 不符的，也不使用它进行训练，而是直接利用 L2 loss ，让 shape 参数更接近 mean pose。
 
 * 为了加速和提升训练效果，对于单个训练数据，文章提出采用字典存储当前它的 best fit ，且字典的初始化可以采用 offline 的方式提前完成。
 
-小节：这篇文章提出的方法很巧妙的结合了 optimization-based 和 regression-based 方法的优点，具有启发性，同时训练中提到的一些 trick 也可以借鉴。
+***小节：这篇文章提出的方法很巧妙的结合了 optimization-based 和 regression-based 方法的优点，具有启发性，同时训练中提到的一些 trick 也可以借鉴。***
 
 ## 《Keep it SMPL: Automatic Estimation of 3D Human Pose and Shape from a Single Image》
 ![](/picture/6.png)
-
-这是 ECCV 2016的一篇文章，提出了一种从单张图像恢复出 3d pose 和 shape 的方法 SMPLify，文章的亮点如下：
+**这是 ECCV 2016的一篇文章，提出了一种从单张图像恢复出 3d pose 和 shape 的方法 SMPLify，文章的亮点如下：**
 
 * 相比之前的方法，既解决了 3d pose 也估计出了 3d shape，并且整个过程 fully automatic ，数据上也只需要单张影像即可。
 
@@ -51,6 +50,9 @@
 
 *  在训练过程中，文章假定 camera translation 和 body orientation 未知；训练前期固定shape 和 pose，完成camera translation 估计；之后采用 staged approach 来进行训练。
 
-小节： 比较早的一篇文章可以借鉴的地方不多，主要是一些基础概念和知识，以及实验等方面的学习，关于 camera translation 和 staged approach 可以进一步了解。
+***小节： 比较早的一篇文章可以借鉴的地方不多，主要是一些基础概念和知识，以及实验等方面的学习，关于 camera translation 和 staged approach 可以进一步了解。***
 
-## 
+## 《3D Hand Shape and Pose Estimation From a Single RGB<br>CVPR 2019
+![](/picture/7.png)
+
+这是 CVPR 2019 的一篇文章
