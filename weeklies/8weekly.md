@@ -19,15 +19,17 @@
 * 相比之前的方法，既解决了 3d pose 也估计出了 3d shape，并且整个过程 fully automatic ，数据上也只需要单张影像即可。
 * 文章提出了一种解决 interpenetration 的方法， 利用 capsules 去 approximate body shape，训练了一个 linear regressor 从 shape coefficient 得到 capsules‘ radii and axis length。
 * 文章提出要 minimize 的 objective function 有五个 error terms：
-    1. $E_j$ 减小 3d joints 投影后与 ground truth 2d joints 之间的差距。
+    1. ![](http://latex.codecogs.com/gif.latex?E_j) 减小 3d joints 投影后与 ground truth 2d joints 之间的差距。
         >"Our joint-based data term penalizes the weighted 2D distance between estimated joints, Jest, and corresponding projected SMPL joints"
-    2. $E_a$ 对肘关节和膝关节的弯曲进行限定。
+    2. ![](http://latex.codecogs.com/gif.latex?E_a) 对肘关节和膝关节的弯曲进行限定。
         >"We introduce a pose prior penalizing elbows and knees that bend unnaturally"
-    3. $E_\theta$ 使用 mixture of Gaussian 来得到 pose 的 distribution, 计算熵函数。
+    3. ![](http://latex.codecogs.com/gif.latex?E_\theta) 使用 mixture of Gaussian 来得到 pose 的 distribution, 计算熵函数。
         >"We then fit a mixture of Gaussians to approximately 1 million poses, spanning 100 subjects"
-    4. $E_sp$ 用来解决 interpenetration 的问题，且仅用来对 pose 进行调整。
+    4. ![](http://latex.codecogs.com/gif.latex?E_{sp}) 用来解决 interpenetration 的问题，且仅用来对 pose 进行调整。
         >"We consider a 3D isotropic Gaussian with σ(β) = r(β)/3 for each sphere, and define the penalty as a scaled version of the integral of the product of Gaussians corresponding to “incompatible” parts" 
-    5. $E_sp$ 利用经过 PCA 变换的 SMPL pose 参数空间，计算马氏距离。
+    5. ![](http://latex.codecogs.com/gif.latex?E_\beta) 利用经过 PCA 变换的 SMPL pose 参数空间，计算马氏距离。
 *  在训练过程中，文章假定 camera translation 和 body orientation 未知；训练前期固定shape 和 pose，完成camera translation 估计；之后采用 staged approach 来进行训练。
 
 小节： 比较早的一篇文章可以借鉴的地方不多，主要是一些基础概念和知识，以及实验等方面的学习，关于 camera translation 和 staged approach 可以进一步了解。
+
+## 
