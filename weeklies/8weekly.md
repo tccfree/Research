@@ -4,6 +4,7 @@
 
 ## 《Learning to Reconstruct 3D Human Pose and Shape via Model-fitting in the Loop
 ![](/picture/5.png)
+
 **这是 ICCV 2019的一篇文章，提出了结合 regression 和 optimization 的一种学习方法 SPIN，文章的亮点和值得注意的细节如下：**
 
 * optimization-based model 的精度更高但是容易受初值的影响，而 regression-based model 需要大量的训练数据；基于此，文章提出相结合的方法，利用 regression 得到的 estimate 使得 iterative optimization 更快速准确，同时 optimization 的结果反过来也可以作为 regression network 的 strong supervision。
@@ -26,6 +27,7 @@
 
 ## 《Keep it SMPL: Automatic Estimation of 3D Human Pose and Shape from a Single Image》
 ![](/picture/6.png)
+
 **这是 ECCV 2016的一篇文章，提出了一种从单张图像恢复出 3d pose 和 shape 的方法 SMPLify，文章的亮点如下：**
 
 * 相比之前的方法，既解决了 3d pose 也估计出了 3d shape，并且整个过程 fully automatic ，数据上也只需要单张影像即可。
@@ -54,6 +56,7 @@
 
 ## 《Embodied Hands: Modeling and Capturing Hands and Bodies Together》
 ![](/picture/8.png)
+
 **这是 Siggraph Asia 2017 的一篇文章，阅读这篇的主要目的是学习 MANO 模型，文章的亮点和值得注意的地方如下：**
 
 * 文章提出了 hand Model with Articulated and Non-rigid defOrmations，即 MANO 方法，此种方法基于 SMPL，但是在 corrective pose blend shape 上做了 localize 的操作，并且也对 pose space 使用了 PCA 变化，降低了维数。
@@ -91,6 +94,7 @@
 
 ## 《Weakly Supervised 3D Hand Pose Estimation via Biomechanical Constraints》
 ![](/picture/9.png)
+
 **这是 ECCV 2020 的一篇文章，文章提出了一系列 novel loss 来提升神经网络从 2d image 生成 feasible 3d hand pose 的能力，文章的亮点和值得注意的地方如下：**
 
 * direct additional 2d supervision 对于减轻 3d depth 和 scale 方面的不确定性帮助很少，improvement 主要来自于生成的 3d pose 与 2d projection 吻合度提升，但是深度信息方面的不确定性依然没有得到正面的解决，因此仍然需要大量的 fully annotated training data，而文章提出的 BMC 方法可以减少对 3d 标签数据的依赖。文章认为 human hand 受制于 biomechanics，据此，文章：
