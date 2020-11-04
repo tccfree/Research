@@ -2,7 +2,7 @@
 
 这周的主要工作是读了五篇paper，运行了SMPL的代码
 
-## 《Learning to Reconstruct 3D Human Pose and Shape via Model-fitting in the Loop
+## [《Learning to Reconstruct 3D Human Pose and Shape via Model-fitting in the Loop》]()
 ![](/picture/5.png)
 
 **这是 ICCV 2019的一篇文章，提出了结合 regression 和 optimization 的一种学习方法 SPIN，文章的亮点和值得注意的细节如下：**
@@ -25,7 +25,7 @@
 
 ***小节：这篇文章提出的方法很巧妙的结合了 optimization-based 和 regression-based 方法的优点，具有启发性，同时训练中提到的一些 trick 也可以借鉴。***
 
-## 《Keep it SMPL: Automatic Estimation of 3D Human Pose and Shape from a Single Image》
+## [《Keep it SMPL: Automatic Estimation of 3D Human Pose and Shape from a Single Image》]()
 ![](/picture/6.png)
 
 **这是 ECCV 2016的一篇文章，提出了一种从单张图像恢复出 3d pose 和 shape 的方法 SMPLify，文章的亮点如下：**
@@ -54,7 +54,7 @@
 
 ***小节： 比较早的一篇文章可以借鉴的地方不多，主要是一些基础概念和知识，以及实验等方面的学习，关于 camera translation 和 staged approach 可以进一步了解。***
 
-## 《Embodied Hands: Modeling and Capturing Hands and Bodies Together》
+## [《Embodied Hands: Modeling and Capturing Hands and Bodies Together》]()
 ![](/picture/8.png)
 
 **这是 Siggraph Asia 2017 的一篇文章，阅读这篇的主要目的是学习 MANO 模型，文章的亮点和值得注意的地方如下：**
@@ -75,7 +75,7 @@
 
 ***小节：这篇文章提出了 MANO 模型，阅读这篇主要也是学习 MANO 这样一个 hand model，但同时文章在实验和训练过程中做的考虑和一些细节的处理同样值得认真阅读和思考，可能可以在未来的工作中借鉴。***
 
-## 《3D Hand Shape and Pose From Images in the Wild》
+## [《3D Hand Shape and Pose From Images in the Wild》]()
 ![](/picture/7.png)
 
 **这是 CVPR 2019 的一篇文章，提出了端到端的从 in the wild 影像恢复出 3d hand pose 和 shape 的深度学习方法，文章的亮点和值得注意的地方如下：**
@@ -92,7 +92,7 @@
 
 ***小节：这篇提出的方法比较简单，但是模型的效果很好，L1 L2 loss 的使用可以借鉴。***
 
-## 《Weakly Supervised 3D Hand Pose Estimation via Biomechanical Constraints》
+## [《Weakly Supervised 3D Hand Pose Estimation via Biomechanical Constraints》]()
 ![](/picture/9.png)
 
 **这是 ECCV 2020 的一篇文章，文章提出了一系列 novel loss 来提升神经网络从 2d image 生成 feasible 3d hand pose 的能力，文章的亮点和值得注意的地方如下：**
