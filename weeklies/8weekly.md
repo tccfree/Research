@@ -53,7 +53,7 @@
 ***小节： 比较早的一篇文章可以借鉴的地方不多，主要是一些基础概念和知识，以及实验等方面的学习，关于 camera translation 和 staged approach 可以进一步了解。***
 
 ## 《Embodied Hands: Modeling and Capturing Hands and Bodies Together》
-
+![](/picture/8.png)
 **这是 Siggraph Asia 2017 的一篇文章，阅读这篇的主要目的是学习 MANO 模型，文章的亮点和值得注意的地方如下：**
 
 * 文章提出了 hand Model with Articulated and Non-rigid defOrmations，即 MANO 方法，此种方法基于 SMPL，但是在 corrective pose blend shape 上做了 localize 的操作，并且也对 pose space 使用了 PCA 变化，降低了维数。
@@ -88,3 +88,26 @@
 * 文章比较了只使用 2d 标签，通过投影 3d joints 来进行监督学习的 2d fitting 方法，发现在3d 的效果方面文章提出的方法要显著更好。
 
 ***小节：这篇提出的方法比较简单，但是模型的效果很好，L1 L2 loss 的使用可以借鉴。***
+
+## 《Weakly Supervised 3D Hand Pose Estimation via Biomechanical Constraints》
+![](/picture/9.png)
+**这是 ECCV 2020 的一篇文章，文章提出了一系列 novel loss 来提升神经网络从 2d image 生成 feasible 3d hand pose 的能力，文章的亮点和值得注意的地方如下：**
+
+* direct additional 2d supervision 对于减轻 3d depth 和 scale 方面的不确定性帮助很少，improvement 主要来自于生成的 3d pose 与 2d projection 吻合度提升，但是深度信息方面的不确定性依然没有得到正面的解决，因此仍然需要大量的 fully annotated training data，而文章提出的 BMC 方法可以减少对 3d 标签数据的依赖。文章认为 human hand 受制于 biomechanics，据此，文章：
+    >While the bone length constraints have been used successfully [39,49], capturing other biomechanical aspects is more difficult. Instead of fitting a hand model to the predictions, we extract the quantities in question directly from the predictions to impose our constraints.
+
+* 具体来说，文章提出的 soft constraints 通过几个 loss 来表达，可以加在任何输出 3d joints 的深度学习网络中，包含三个部分：valid bone lengths， valid palm structure， valid joint angles of thumb and fingers。
+
+* 针对 Iqbal 等人提出的 2.5D representation 方法，文章指出 J2d 和 zr 的 small error 会对 Zroot 的估计产生很大的影像，从而降低最终 absolute pose 的精度，所以提出了一个 novel refinement network 计算 Zroot 的 residual term，进行优化。 
+
+* 这篇文章对 hand pose estimation from monocular RGB 的两种方法 model-based（model-fitting） 和 learning-based（regression）做了较为详细的 review，可以参考。
+
+* 文章提出的方法 extract quantities in question directly from predictions，并施加 biomechanical constrain，从而达到 predict anatomically plausible hand pose for weakly-supervised data 的目的，提高了模型的 generalizability。
+
+* 文章考虑到了 finger angle 之间的 inter-dependency，因此近似了一个 convex hull，之后的 ablation study 也证实了 co-dependent angle limits 的重要性，相关内容可以进一步学习。
+
+* 文章将 3d preiction error 通过 pinhole camera model 分解成 2D（J2D）和 depth component（Z），这样可以进一步对 3d prediction error 的分布和来源做分析，验证提出的模型是否对深度信息的估计有改善，这个方法可以借鉴。
+
+* 通过实验，验证了 BMC 方法可以在相同模型精度要求的情况下减少训练所需要的 3d 标签数量。
+
+***小节：总体来看文章提出的方法，抓住了 2d 标签相对 3d 标签提供的信息不足这个缺陷做了补充，效果很好，这个思路可以借鉴。其次文章实验部分的设计比较巧妙，尤其是探究精度改善是否来源于深度估计的改善，其次实验结果也让我感受到了 HO-3D D+O 这些数据集的难度，以及 synthetic dataset 提供的 3d 标签对训练效果的影响。***
