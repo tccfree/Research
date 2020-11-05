@@ -40,7 +40,9 @@
 
 ## [《Pushing the Envelope for RGB-based Dense 3D Hand Pose Estimation via Neural Rendering》](https://openaccess.thecvf.com/content_CVPR_2019/papers/Baek_Pushing_the_Envelope_for_RGB-Based_Dense_3D_Hand_Pose_Estimation_CVPR_2019_paper.pdf)
 
-![f](/picture/3.png)这是CVPR2019的一篇文章，文章的亮点体现在：
+![f](/picture/3.png)
+
+**这是CVPR2019的一篇文章，文章的亮点体现在：**
 
 * 可进行梯度传播的 neural render生成出分割和3d joint的结果，用于训练mesh。
 
