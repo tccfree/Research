@@ -48,7 +48,7 @@
     + ![](http://latex.codecogs.com/gif.latex?E_{sp}) 用来解决 interpenetration 的问题，且仅用来对 pose 进行调整。
         >"We consider a 3D isotropic Gaussian with σ(β) = r(β)/3 for each sphere, and define the penalty as a scaled version of the integral of the product of Gaussians corresponding to “incompatible” parts" 
 
-    + ![](http://latex.codecogs.com/gif.latex?E_\beta) 利用经过 PCA 变换的 SMPL pose 参数空间，计算马氏距离。
+    + ![](http://latex.codecogs.com/gif.latex?E_\beta) 利用经过 PCA 变换的 SMPL shape 参数空间，计算马氏距离。
 
 *  在训练过程中，文章假定 camera translation 和 body orientation 未知；训练前期固定shape 和 pose，完成camera translation 估计；之后采用 staged approach 来进行训练。
 
