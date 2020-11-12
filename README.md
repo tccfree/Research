@@ -28,7 +28,7 @@ paper |keyword & summary
 * [2020/10/25](weeklies/7.5weekly.md) 
 * [2020/10/30](weeklies/8weekly.md)
 * [2020/11/06](weeklies/8.5weekly.md)
-* [2020/11/013](weeklies/9weekly.md)
+* [2020/11/13](weeklies/9weekly.md)
 
 
 more to come soon... :fuelpump::fuelpump::fuelpump:
