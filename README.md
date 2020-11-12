@@ -16,6 +16,7 @@ paper |keyword & summary
 [SMPL: A Skinned Multi-Person Linear Model<br>Siggraph Asia 2015](http://files.is.tue.mpg.de/black/papers/SMPL2015.pdf)|[SMPL model、<br>DMPL model](/picture/push.jpeg)
 [Keep it SMPL: Automatic Estimation of 3D Human Pose and Shape from a Single Image<br>ECCV 2016](https://arxiv.org/pdf/1607.08128.pdf)|[SMPLify、<br>SMPL & MANO based、<br>Body interpenetration](weeklies/8weekly.md)
 [Weakly-supervised 3D Hand Pose Estimation from Monocular RGB Images <br>ECCV 2018](https://openaccess.thecvf.com/content_ECCV_2018/papers/Yujun_Cai_Weakly-supervised_3D_Hand_ECCV_2018_paper.pdf)|[Depth regularizer、<br>Depth weakly supervised](weeklies/7weekly.md)
+[Model-Based 3D Hand Pose Estimation from Monocular Video](http://www.cs.toronto.edu/~fleet/research/Papers/handTrackerPAMI.pdf)|[Occlusion forces、<br>Shading and texture](weeklies/9weekly.md)
 
 ## weeklies index :man_teacher: :raising_hand:
 * [2020/08/01](weeklies/1weekly.md) 
@@ -27,6 +28,7 @@ paper |keyword & summary
 * [2020/10/25](weeklies/7.5weekly.md) 
 * [2020/10/30](weeklies/8weekly.md)
 * [2020/11/06](weeklies/8.5weekly.md)
+* [2020/11/013](weeklies/9weekly.md)
 
 
 more to come soon... :fuelpump::fuelpump::fuelpump:
