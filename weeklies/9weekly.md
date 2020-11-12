@@ -40,4 +40,4 @@
 
 * 文章提到没有 model 中没有考虑 cast shadow，这是另一个尚存有疑问的地方，illuminant model 与 texture model 的综合效果不是已经足够对 cast shadow 进行表达了吗？
 
-***小节：这篇应该可以算上是近期阅读 hand model 最难的一篇文章，给出了大量的 rigorous mathematical formulation，考虑的问题比较精细，涉及到边缘部分连续性的问题，全篇的精髓应该是提出的 occlusion forces，巧妙且效果显著；另一个比较大的收获是光照模型，对 texture model 和 illuminant model 有了基本的了解，并且对其在 hand tracking 中的作用有了一定的体会。***
+***小节：这篇应该可以算上是近期阅读 hand model 最难的一篇文章，给出了大量的 rigorous mathematical formulation，考虑的问题比较精细，涉及到边缘部分连续性的问题，全篇的精髓应该是提出的 occlusion forces，巧妙且效果显著；另一个比较大的收是 texture 和 shading，对 texture model 和 illuminant model 有了基本的了解，并且对其在 hand tracking 中的作用有了一定的体会。***
