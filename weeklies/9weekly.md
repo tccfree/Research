@@ -41,3 +41,32 @@
 * 文章提到没有 model 中没有考虑 cast shadow，这是另一个尚存有疑问的地方，illuminant model 与 texture model 的综合效果不是已经足够对 cast shadow 进行表达了吗？
 
 ***小节：这篇应该可以算上是近期阅读 hand model 最难的一篇文章，给出了大量的 rigorous mathematical formulation，考虑的问题比较精细，涉及到边缘部分连续性的问题，全篇的精髓应该是提出的 occlusion forces，巧妙且效果显著；另一个比较大的收是 texture 和 shading，对 texture model 和 illuminant model 有了基本的了解，并且对其在 hand tracking 中的作用有了一定的体会。***
+
+## [《HTML: A Parametric Hand Texture Model for 3D Hand Reconstruction and Personalization》](https://handtracker.mpi-inf.mpg.de/projects/HandTextureModel/content/HandTextureModel_ECCV2020.pdf)
+![](/picture/12.png)
+
+**这是 ECCV 2020 的一篇文章，提出了 parametric texture model of human hands，文章的亮点和值得注意的地方如下：**
+
+* 文章指出 appearance personalization 除了对 VR application 中的 immersion 和 sense of “body ownership” 有帮助，也可以改善基于 analysis-by-synthesis 方法的 hand tracking 和 pose estimation 的任务效果。
+
+* 文章提出的方法可以从单张 RGB 影像中获得 personalized 3D hand mesh，并且 compatible with MANO，同时：
+    >"It enables a self-supervised photometric loss, directly comparing the textured rendered hand model to the input image."
+
+* 在 related work 部分，文章指出在 hand geometry 方面， MANO model 被广泛使用，但是 hand appearance 方面，还没有对应的 data-driven parametric texture model，文章提出的方法是第一个；同时指出在 face model 领域，the benefit of having texture model 已经被证实，所以文章提出的 HTML 也有 potential to drive similar advances。
+
+* 在获取了 3D hand scan 之后，需要进行 data canonicalization，包括：background removal、MANO model fitting、texture mapping、shading removal、seamless texture stitching。其中尚不清楚，可以进一步了解的知识点有 hand tracking approach of Muller et al，iterative closet point（ICP），prior correspondence 等，总的来说，这一部分涉及到很多不同的算法，不影响理解但是文章中给出的描述也有限。
+
+* texture model creation 方面文章使用了 PCA 变化选取了 101 个特征向量。
+
+* 文章指出 parametric hand appearance model 可能存在两个方面的应用：3D hand reconstruction and personalization from a single image 和 as a neural network layer enabling self-supervised photometric loss。
+
+* 在 3D hand reconstructing and personalization 应用上，首先为了 refine initial mesh，文章使用了 ICP constraints 来 optimize 3D displacements of each vertex，具体的做法是：先找到每个 boundary vertex 最临近的 silhouette pixel 作为 correspondence，接着来 minimize objective function。
+
+* 在 self-supervised photometric loss 部分，文章提出使用 texture hand model layer，利用 differentiable render 将 mesh 投影成可与 input image 直接比较的 image，逐像素计算 loss。
+
+* 在实验部分，文章进行了 compactness，generalization，specificity，influence of shading removal 和 influence of prior correspondence 的探究，并指出 with photometric loss，pose and shape prediction 效果 comparable to SOTA。
+
+* 文章在 conclusion 部分指出还有很多可以完善的工作，比如使用 non-linear model 而不是 PCA model 来建立 texture model，pose-dependent texture 等。其中个人觉得比较重要的是引入 lighting estimation，这样可以进一步解决从单张相片 silhouette 获取 3D pose 和 shape 时的 ambiguity，文章的提出的方法 assume a single fixed illumination condition，并且实验的结果，也证实即使有了所谓的 photometric loss，pose 和 shape 的效果也提升一般，但如果加入对 shading 的表达可能有不一样的效果。
+
+***小节：这篇提出的方法并不复杂，就像文章在 conclusion 部分所说未来还有很多可以完善的地方，但是文章的关注的问题确实有很重要的意义。***
+
