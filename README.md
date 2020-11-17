@@ -18,7 +18,7 @@ paper |keyword & summary
 [Weakly-supervised 3D Hand Pose Estimation from Monocular RGB Images <br>ECCV 2018](https://openaccess.thecvf.com/content_ECCV_2018/papers/Yujun_Cai_Weakly-supervised_3D_Hand_ECCV_2018_paper.pdf)|[Depth regularizer、<br>Depth weakly supervised](weeklies/7weekly.md)
 [Model-Based 3D Hand Pose Estimation from Monocular Video](http://www.cs.toronto.edu/~fleet/research/Papers/handTrackerPAMI.pdf)|[Occlusion forces、<br>Shading and texture](weeklies/9weekly.md)
 [HTML: A Parametric Hand Texture Model for 3D Hand Reconstruction and Personalization<br>ECCV 2020](https://handtracker.mpi-inf.mpg.de/projects/HandTextureModel/content/HandTextureModel_ECCV2020.pdf)|[Hand texture model](weeklies/9weekly.md)
-[HOPE-Net: A Graph-based Model for Hand-Object Pose Estimation<br>CVPR 2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Doosti_HOPE-Net_A_Graph-Based_Model_for_Hand-Object_Pose_Estimation_CVPR_2020_paper.pdf)|[Adaptive graph convolution、<br>Hand-Object pose estimation、<br>Adaptive Grpah U-Net]()
+[HOPE-Net: A Graph-based Model for Hand-Object Pose Estimation<br>CVPR 2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Doosti_HOPE-Net_A_Graph-Based_Model_for_Hand-Object_Pose_Estimation_CVPR_2020_paper.pdf)|[Adaptive graph convolution、<br>Hand-Object pose estimation、<br>Adaptive Grpah U-Net](weeklies/9.5weekly.md)
 
 ## weeklies index :man_teacher: :raising_hand:
 * [2020/08/01](weeklies/1weekly.md) 
