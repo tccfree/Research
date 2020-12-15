@@ -35,7 +35,10 @@ index |paper |keyword & summary
 * [2020/11/06](weeklies/8.5weekly.md)
 * [2020/11/13](weeklies/9weekly.md)
 * [2020/11/20](weeklies/9.5weekly.md)
-* [2020/11/28](weeklies/9.5weekly.md)
+* [2020/11/28](weeklies/10weekly.md)
+* [2020/12/05](weeklies/10.5weekly.md)
+* [2020/12/12](weeklies/11weeekly.md)
+* [2020/12/19](weeklies/11.5weeekly.md)
 
 
 more to come soon... :fuelpump::fuelpump::fuelpump:
