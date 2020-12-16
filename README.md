@@ -23,6 +23,7 @@ index |paper |keyword & summary
 17|[HandVoxNet: Deep Voxel-Based Network for 3D Hand Shape and Pose Estimation from a Single Depth Map<br>CVPR 2020](https://arxiv.org/pdf/2004.01588.pdf)|[Voxel-Based Shape estimation、<br>3D CNN、<br>HandVoxNet](/weeklies/9.5weekly.md)
 18|[Weakly-Supervised Mesh-Convolutional Hand Reconstruction in the Wild<br>CVPR 2020]()|[under construction...](/picture/push.jpeg)
 19|[Generalizing Hand Segmentation in Egocentric Videos With Uncertainty-Guided Model Adaptation<br>CVPR 2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Cai_Generalizing_Hand_Segmentation_in_Egocentric_Videos_With_Uncertainty-Guided_Model_Adaptation_CVPR_2020_paper.pdf)|[Online hand segmentation、<br>domain adaptation、<br>Bayesian CNN](/weeklies/11.5weekly.md)
+20|[Weakly-supervised Domain Adaptation via GAN and Mesh Model for Estimating 3D Hand Poses Interacting Objects<br>CVPR 2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Baek_Weakly-Supervised_Domain_Adaptation_via_GAN_and_Mesh_Model_for_Estimating_CVPR_2020_paper.pdf)|[HOI HPE、<br>GAN、<br>Domain adaptation、<br>MANO](/weeklies/11.5weekly.md)
 
 ## weeklies index :man_teacher: :raising_hand:
 * [2020/08/01](weeklies/1weekly.md) 
